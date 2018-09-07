@@ -1,0 +1,23 @@
+ibm_compute_vm_instance.tf-demo: Creating...
+  block_storage_ids.#:          "" => "<computed>"
+  cores:                        "" => "1"
+  datacenter:                   "" => "wdc01"
+  domain:                       "" => "ibm.com"
+  hostname:                     "" => "terraform"
+  hourly_billing:               "" => "true"
+  ipv6_address:                 "" => "<computed>"
+  ipv6_address_id:              "" => "<computed>"
+  ipv6_enabled:                 "" => "false"
+  ipv6_static_enabled:          "" => "false"
+  memory:                       "" => "1024"
+  network_speed:                "" => "100"
+  os_reference_code:            "" => "DEBIAN_8_64"
+  public_bandwidth_unlimited:   "" => "false"
+  public_subnet:                "" => "<computed>"
+
+ibm_compute_vm_instance.tf-demo: Still creating... (10s elapsed)
+...
+ibm_compute_vm_instance.tf-demo: Still creating... (4m0s elapsed)
+ibm_compute_vm_instance.tf-demo: Creation complete after 4m7s (ID: 61066829)
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.

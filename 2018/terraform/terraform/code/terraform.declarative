@@ -1,0 +1,5 @@
+resource "aws_instance" "example" {
+  count = 10 // HL
+  ami = "ami-v1"
+  instance_type = "t2.micro" 
+}

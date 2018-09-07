@@ -1,0 +1,25 @@
+terraform plan
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  + ibm_compute_vm_instance.tf-demo
+      id:                           <computed>
+      block_storage_ids.#:          <computed>
+      cores:                        "1"
+      datacenter:                   "wdc01"
+      domain:                       "ibm.com"
+      hostname:                     "terraform"
+      hourly_billing:               "true"
+      ipv4_address:                 <computed>
+      local_disk:                   "true"
+      memory:                       "1024"
+      network_speed:                "100"
+      os_reference_code:            "DEBIAN_8_64"
+      private_subnet:               <computed>
+      private_subnet_id:            <computed>
+      private_vlan_id:              <computed>
+      ...
+Plan: 1 to add, 0 to change, 0 to destroy.

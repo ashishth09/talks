@@ -1,0 +1,21 @@
+ibm_compute_vm_instance.tf-demo:
+  id = 61066829
+  block_storage_ids.# = 0
+  cores = 1
+  disks.# = 1
+  disks.0 = 25
+  ipv4_address = 108.168.183.12
+  ipv4_address_private = 10.108.177.82
+  os_reference_code = DEBIAN_8_64
+  private_interface_id = 35144391
+  private_network_only = false
+  private_security_group_ids.# = 0
+  private_subnet = 10.108.177.64/26
+  private_subnet_id = 646776
+  private_vlan_id = 2434895
+  public_bandwidth_unlimited = false
+  public_interface_id = 35144393
+  public_subnet = 108.168.183.8/29
+  public_subnet_id = 600454
+  public_vlan_id = 2434893
+  ...

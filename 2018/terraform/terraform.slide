@@ -1,0 +1,117 @@
+Terraform
+Infrastructure as Code
+
+Ashish K Thakur
+DevOps Engineer, IBM
+ashishth@in.ibm.com
+
+* What is Terraform
+
+ A tool for building, changing, and versioning infrastructure safely and efficiently
+
+* Key Features
+- Infrastructure as Code 
+- Execution Plans 
+- Resource Graph
+- Change Automation 
+
+* Infrastructure as Code
+[[https://www.ioccc.org/2018/anderson/prog.c]]
+.code terraform/code/obfuscate.c
+
+
+* Infrastructure as Code (intended use)
+- Collaborate & share
+- Evolve your infrastructure
+- Automation friendly
+.code terraform/code/free_cluster.tf
+
+* Execution Plans
+- One Safe Workflow Across Providers
+
+* Change Automation 
+- Reproducible Infrastructure
+
+* Build infrastructure
+
+.code terraform/code/vm.tf
+
+* Resource Graph
+
+Generated via `terraform graph | dot -Tsvg > graph.svg`
+.image terraform/img/graph.svg
+
+* Terraform Plan
+
+.code terraform/code/vm.plan.output
+
+* Terraform Apply
+
+.code terraform/code/vm.apply.output
+
+* Terraform Show
+
+.code terraform/code/vm.apply.show
+
+* Terraform Change
+
+.code terraform/code/vm.diff.tf
+
+* Terraform Plan after Change
+
+.code terraform/code/vm.diff.plan.output
+
+* Terraform Apply after Change
+
+.code terraform/code/vm.apply.on.diff.output
+
+
+* Terraform Destroy
+
+
+* Bring existing infra under Terraform management
+.code terraform/code/vm.import.tf
+`terraform import ibm_compute_vm_instance.vm_created_outside_tf <vm-id>`
+
+
+* State
+- Mapping to the Real World
+- Keeps track of metadata
+- Stored by default in a local file named "terraform.tfstate"
+- JSON
+- Workspaces 
+ -  equivalent to renaming your state file
+ -  usage - a developer working on a complex set of infrastructure changes might create a new temporary workspace in order to freely experiment with changes without affecting the default workspace.
+- Remote state
+  - state held in memory when used by Terraform. 
+  - may be encrypted at rest depending on backend used.
+  - good option for storing sensitive data
+
+
+* Backends
+- Determines how state is loaded and how an operation such as apply is executed
+- Work efficiently in a team
+- Keeping sensitive information off disk
+- Remote operations - Turn off your computer and still get the job done
+
+* Provisioners
+- execute scripts on a local or remote machine
+
+* Terraform vs Ansible
+- Configuration Management vs Orchestration
+- Procedural vs Declarative
+
+[[https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c][Reference]]
+.code terraform/code/ansible.procedural
+
+.code terraform/code/terraform.declarative
+
+* IBM Provider Templates
+- [[https://github.com/Cloud-Schematics]]
+
+* Setting up on Windows
+- [[https://www.ibm.com/blogs/bluemix/2018/01/setting-terraform-ibm-cloud-provider-windows/]]
+
+* Terraform Provider for IBM Cloud
+- [[https://github.com/IBM-Cloud/terraform-provider-ibm]]
+- [[https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples]]

@@ -1,0 +1,4 @@
+- ec2:
+    count: 10 // HL
+    image: ami-v1    
+    instance_type: t2.micro
